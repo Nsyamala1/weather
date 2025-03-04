@@ -11,7 +11,6 @@ app.use(express.static("public"));
 
 // Function to generate mock weather data
 const generateMockWeather = (city) => {
-  const radarImageUrl = faker.image.imageUrl();
     return {
         location: {
             name: city,
@@ -27,7 +26,6 @@ const generateMockWeather = (city) => {
                 text: faker.word.sample(["Sunny", "Cloudy", "Rainy", "Stormy", "Snowy"]), // Random condition
             },
         },
-        radarImageUrl,
     };
 };
 
